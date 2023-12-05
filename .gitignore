@@ -5,3 +5,5 @@
 **/ipynb_checkpoints/
 
 **/**/blog_review_url_list/
+
+.vscode/
