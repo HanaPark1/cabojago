@@ -42,4 +42,4 @@
 - 리뷰 파일 한글 타이틀 => 동네축약어+카페 고유 ID+리뷰형태 형식으로 변경
   - 변경 예외처리 코드도 작성
 - local에서 konlpy를 이용해 텍스트 형태소 분석
-- wordcount 짜기
+- spark wordcount 짜기
