@@ -8,13 +8,13 @@ okt = Okt()
 current_dir = os.getcwd()
 
 # 파일 경로 설정
-directory = os.path.join(current_dir, 'data', 'blog_review', 'blog_review_result_list', '망원동')
+directory = os.path.join(current_dir, 'data', 'blog_review', 'blog_review_result_list', '연남동')
 filepaths = glob.glob(directory + '/*.csv')
 
 for filepath in filepaths:
     
     # 결과를 새로운 txt 파일로 저장
-    output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result')
+    output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result','blog_review_result_knlpy','yeonnam')
     output_filename = os.path.join(output_directory, os.path.basename(filepath).replace('.csv', '_morphs.txt'))
 
     # 파일이 이미 존재하는지 확인
