@@ -6,34 +6,33 @@ import os
 okt = Okt()
 current_dir = os.getcwd()
 
-# 파일 경로 설정
-# filepath = os.path.join(current_dir, 'data', 'visiter_reviews', 'visiter_reviews_mangwon.csv')
-# filepath = os.path.join(current_dir, 'data', 'visiter_reviews', 'visiter_reviews_hannam.csv')
-# filepath = os.path.join(current_dir, 'data', 'visiter_reviews', 'visiter_reviews_seongsu.csv')
-# filepath = os.path.join(current_dir, 'data', 'visiter_reviews', 'visiter_reviews_yeonhee.csv')
-filepath = os.path.join(current_dir, 'data', 'visiter_reviews', 'visiter_reviews_yeonnam.csv')
+dong_list = ['hannam','mangwon']
 
+for dong in dong_list:
+    # 파일 경로 설정
+    filepath = os.path.join(current_dir, 'data', 'visiter_reviews', f'visiter_reviews_{dong}.csv')
 
-# csv 파일 읽기
-data = pd.read_csv(filepath, index_col=0)
+    # csv 파일 읽기
+    data = pd.read_csv(filepath, index_col=0)
 
-# 형태소 분석 결과를 저장할 DataFrame 생성
-morphs_data = pd.DataFrame(index=data.index, columns=data.columns)
+    # 형태소 분석 결과를 저장할 DataFrame 생성
+    morphs_data = pd.DataFrame(index=data.index, columns=data.columns)
 
-# 형태소 분석 및 품사 태깅
-for column in data.columns:
-    for idx in data.index:
-        text = data.loc[idx, column]
-        if isinstance(text, str):
-            morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective']]
-            morphs_data.loc[idx, column] = ' '.join(morphs)
+    # 형태소 분석 및 품사 태깅
+    for column in data.columns:
+        for idx in data.index:
+            text = data.loc[idx, column]
+            if isinstance(text, str):
+                morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective']]
+                morphs_data.loc[idx, column] = ' '.join(morphs)
+            elif isinstance(text, (int, float)):
+                morphs_data.loc[idx, column] = text
 
-# 결과 확인
-print(morphs_data.head())
-
-# 결과를 새로운 csv 파일로 저장
-# morphs_data.to_csv('visiter_reviews_knlpy_mangwon.csv')
-# morphs_data.to_csv('visiter_reviews_knlpy_hannam.csv')
-# morphs_data.to_csv('visiter_reviews_knlpy_seongsu.csv')
-# morphs_data.to_csv('visiter_reviews_knlpy_yeonhee.csv')
-morphs_data.to_csv('visiter_reviews_knlpy_yeonnam.csv')
+    # 결과 확인
+    print(morphs_data.head())
+    output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result','visiter_reviews_knlpy')
+    output_filename = os.path.join(output_directory, f'visiter_reviews_knlpy_{dong}.csv')
+    
+    # 결과를 새로운 csv 파일로 저장
+    morphs_data.to_csv(output_filename)
+    
