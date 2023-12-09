@@ -6,7 +6,8 @@ import os
 okt = Okt()
 current_dir = os.getcwd()
 
-dong_list = ['hannam','mangwon']
+# dong_list = ['hannam','mangwon']
+dong_list = ['seongsu','yeonnam','yeonhee']
 
 for dong in dong_list:
     # 파일 경로 설정
@@ -22,11 +23,12 @@ for dong in dong_list:
     for column in data.columns:
         for idx in data.index:
             text = data.loc[idx, column]
-            if isinstance(text, str):
+            try:
+                _ = float(text)  # 숫자로 변환 시도
+                morphs_data.loc[idx, column] = text  # 변환 성공하면 그대로 저장
+            except ValueError:  # 변환 실패하면 문자열로 처리
                 morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective']]
                 morphs_data.loc[idx, column] = ' '.join(morphs)
-            elif isinstance(text, (int, float)):
-                morphs_data.loc[idx, column] = text
 
     # 결과 확인
     print(morphs_data.head())
