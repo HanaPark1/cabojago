@@ -5,7 +5,7 @@ import pandas as pd
 current_dir = os.getcwd()
 
 # 시작 디렉터리를 설정합니다.
-start_dir = os.path.join(current_dir, 'data', 'wordcount','blog_reviews','yeonnam')
+start_dir = os.path.join(current_dir, 'data', 'wordcount','blog_reviews','hannam')
 
 # 시작 디렉터리와 그 하위 디렉터리에서 모든 파일을 순회합니다.
 for dirpath, dirnames, filenames in os.walk(start_dir):
@@ -42,7 +42,7 @@ for dirpath, dirnames, filenames in os.walk(start_dir):
             df_filtered = df[~df['word'].isin(exclude_words)]
 
             # 결과를 새로운 csv 파일로 저장합니다.
-            output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result','blog_filter_word_after_wordcount','yeonnam')
+            output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result','blog_filter_word_after_wordcount','hannam')
             output_filename = os.path.join(output_directory, os.path.basename(dirpath).replace('.txt', '_filtered.csv'))
             df_filtered.to_csv(output_filename, index=False)
 
