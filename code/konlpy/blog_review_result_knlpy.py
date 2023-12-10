@@ -25,7 +25,7 @@ for filepath in filepaths:
     if os.path.getsize(filepath) < 2:
         print(f'Skipped empty file: {filepath}')
         continue
-     # csv 파일 읽기
+    # csv 파일 읽기
     try:
         data = pd.read_csv(filepath, header=None, index_col=0)
     except pd.errors.EmptyDataError:
@@ -35,8 +35,8 @@ for filepath in filepaths:
     # 형태소 분석 및 품사 태깅
     for column in data.columns:
         data[column] = data[column].apply(lambda x: [word for word, tag in okt.pos(okt.normalize(x), stem=True) if tag in ['Noun', 'Adjective']] if isinstance(x, str) else x)
-  
-   # 결과 확인
+    
+    # 결과 확인
     try:
         print(data.head())
     except UnicodeEncodeError:
