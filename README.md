@@ -5,6 +5,9 @@
 
 [노션 프로젝트 페이지](https://heathered-felidae-571.notion.site/59b728d8b08c45e6a88a9bb8caa69714?v=3c8d18a732144636a699e861f70889fc&pvs=4)
 
+<img width="1098" alt="스크린샷 2023-12-12 오후 2 50 55" src="https://github.com/cabojago/cabojago/assets/69382168/bef8c657-d071-4b3c-b2e0-2055a4d2ac41">
+
+
 ## Data Collection
 [ 데이터 수집 방법 ]
 - 크롤링(selenium, bs4)   
