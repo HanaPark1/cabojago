@@ -14,14 +14,13 @@ stopwords = ['좋다','있다', '같다', '시간', '곳', '것', '로', '수', 
             '진짜','이','','거','내','때','저','나','부산광역시','경상도','메','마포','시민','서울','쉬',
             '-','커피','맛','이다','엠','개','이다','안','집','옷','폰','및','또','태형','좋아하다','투썸플레이스',
             '이디야','부동산','한남','한남동','용산구','/','성수동','성수','연희동','연희','연남동','연남',
-            '메뉴', '빌딩', '인천', '중구', '귀엽', '친절하다', '향','게','제','밉다','예쁘다','많다'
-                    ]
+            '메뉴', '빌딩', '인천', '중구', '귀엽', '친절하다', '향','게','제','밉다','예쁘다','많다','정말'
+            ,'하나','가지','곧','사람','사장','방문']
 
-dong_list = ['seongsu','hannam','yeonhee','yeonnam']
-
+dong_list = ['mangwon']
 for dong in dong_list:
     # 파일 경로 설정
-    filepath = os.path.join(current_dir, 'data','crawling', 'visiter_reviews', f'visiter_reviews_{dong}.csv')
+    filepath = os.path.join(current_dir, 'data','konlpy', 'visiter_reviews', f'visiter_reviews_knlpy_{dong}.csv')
 
     # csv 파일 읽기
     data = pd.read_csv(filepath, index_col=0)
@@ -34,7 +33,7 @@ for dong in dong_list:
         for idx in data.index:
             text = data.loc[idx, column]
             try:
-                _ = float(text)  # 숫자로 변환 시도
+                _ = float(text)  
                 morphs_data.loc[idx, column] = text  # 변환 성공하면 그대로 저장
             except ValueError:  # 변환 실패하면 문자열로 처리 data\RE_konlpy\blog_reviews\hannam
                 morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective'] and word not in stopwords]
