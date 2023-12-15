@@ -7,18 +7,19 @@ import re
 okt = Okt()
 current_dir = os.getcwd()
 
-file_path = 'data/crawling/cafelist/cafelist_망원동.csv'
+file_path = 'data/crawling/cafelist/cafelist_연희동.csv'
 data = pd.read_csv(file_path)
 
 stopwords = data['name'].tolist()
 split_stopwords = []
+split_stopwords.append('연희동')
 
 for word in stopwords:
     split_stopwords.extend(word.split())
     
 
-input_directory = os.path.join(current_dir, 'data', 'crawling', 'blog_review', 'blog_review_result_list', '망원동')
-output_directory = os.path.join(current_dir, 'data', 'RE_konlpy', 'blog_reviews', 'mangwon')
+input_directory = os.path.join(current_dir, 'data', 'crawling', 'blog_review', 'blog_review_result_list', '연희동')
+output_directory = os.path.join(current_dir, 'data', 'RE_konlpy', 'blog_reviews', 'yeonhee')
 filepaths = glob.glob(input_directory + '/*.csv')
 
 for filepath in filepaths:
