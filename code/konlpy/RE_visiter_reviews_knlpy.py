@@ -6,11 +6,22 @@ import os
 okt = Okt()
 current_dir = os.getcwd()
 
-dong_list = ['mangwon']
+# 불용어 리스트 생성
+stopwords = ['좋다','있다', '같다', '시간', '곳', '것', '로', '수', '맛있다','망원','망원동',
+            '층','주문','소설','카페','층','시장','소','아니다','주인공','서울특별시',
+            '길','아더','홍대','에러','추천','뭔가','층','길','점','호','경기도','번길','마포구','더',
+            '인천광역시','경상남도','스','호점','녀석','밤비','없다','그','대구광역시','영등포구','상가',
+            '진짜','이','','거','내','때','저','나','부산광역시','경상도','메','마포','시민','서울','쉬',
+            '-','커피','맛','이다','엠','개','이다','안','집','옷','폰','및','또','태형','좋아하다','투썸플레이스',
+            '이디야','부동산','한남','한남동','용산구','/','성수동','성수','연희동','연희','연남동','연남',
+            '메뉴', '빌딩', '인천', '중구', '귀엽', '친절하다', '향','게','제','밉다','예쁘다','많다'
+                    ]
+
+dong_list = ['seongsu','hannam','yeonhee','yeonnam']
 
 for dong in dong_list:
     # 파일 경로 설정
-    filepath = os.path.join(current_dir, 'data', 'visiter_reviews', f'visiter_reviews_{dong}.csv')
+    filepath = os.path.join(current_dir, 'data','crawling', 'visiter_reviews', f'visiter_reviews_{dong}.csv')
 
     # csv 파일 읽기
     data = pd.read_csv(filepath, index_col=0)
@@ -25,15 +36,14 @@ for dong in dong_list:
             try:
                 _ = float(text)  # 숫자로 변환 시도
                 morphs_data.loc[idx, column] = text  # 변환 성공하면 그대로 저장
-            except ValueError:  # 변환 실패하면 문자열로 처리
-                morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective']]
+            except ValueError:  # 변환 실패하면 문자열로 처리 data\RE_konlpy\blog_reviews\hannam
+                morphs = [word for word, tag in okt.pos(okt.normalize(text), stem=True) if tag in ['Noun', 'Adjective'] and word not in stopwords]
                 morphs_data.loc[idx, column] = ' '.join(morphs)
 
     # 결과 확인
     print(morphs_data.head())
-    output_directory = os.path.join(current_dir, 'preprocessing', 'processing_result','visiter_reviews_knlpy')
+    output_directory = os.path.join(current_dir, 'data', 'RE_konlpy','visiter_reviews',f'{dong}')
     output_filename = os.path.join(output_directory, f'visiter_reviews_knlpy_{dong}.csv')
     
     # 결과를 새로운 csv 파일로 저장
     morphs_data.to_csv(output_filename)
-    
