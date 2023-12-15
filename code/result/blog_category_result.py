@@ -28,16 +28,16 @@ for root, dirs, files in os.walk(dir_path):
                 print("No match found.")
             df = spark.read.csv(file_path, header=True)
 
-            # 이색카페 조건 추가
-            unique_category_rows = df.filter(df['category'] == '이색').take(1)
+            # 동물 카페 조건 추가
+            unique_category_rows = df.filter(df['category'] == '동물').take(1)
             if unique_category_rows:
-                # '이색' 카테고리에도 'id' 컬럼 추가
+                # '동물' 카테고리에도 'id' 컬럼 추가
                 final_results.extend([{'id': extracted_number, **row.asDict()} for row in unique_category_rows])
             else:
-                # 상위 3개 행 중 '공부', '동물', '뷰', '친환경' 중 하나를 포함하는지 확인
+                # 상위 3개 행 중 '데이트', '이색', '뷰', '친환경' 중 하나를 포함하는지 확인
                 top3_rows = df.limit(3)
                 selected_row = top3_rows.filter(
-                    (F.col("category").isin(['공부', '동물', '뷰', '친환경'])) &
+                    (F.col("category").isin(['이색', '데이트', '뷰', '친환경'])) &
                     (F.col("count") > 0)
                 ).first()
 
