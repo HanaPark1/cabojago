@@ -17,7 +17,7 @@ stopwords = ['좋다','있다', '같다', '시간', '곳', '것', '로', '수', 
             '메뉴', '빌딩', '인천', '중구', '귀엽', '친절하다', '향','게','제','밉다','예쁘다','많다','정말'
             ,'하나','가지','곧','사람','사장','방문']
 
-dong_list = ['mangwon']
+dong_list = ['hannam','seongsu','mangwon','yeonhee','yeonnam']
 for dong in dong_list:
     # 파일 경로 설정
     filepath = os.path.join(current_dir, 'data','konlpy', 'visiter_reviews', f'visiter_reviews_knlpy_{dong}.csv')

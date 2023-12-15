@@ -18,10 +18,9 @@ for word in stopwords:
     split_stopwords.extend(word.split())
     
 
-input_directory = os.path.join(current_dir, 'data', 'crawling', 'blog_review', 'blog_review_result_list', '한남동')
+input_directory = os.path.join(current_dir, 'data', 'wordcount2','mangwon','mw_count_13403633_blog_stopwords.txt')
 output_directory = os.path.join(current_dir, 'data', 'RE_konlpy', 'blog_reviews', 'hannam')
 filepaths = glob.glob(input_directory + '/*.csv')
-
 for filepath in filepaths:
     try:
         data = pd.read_csv(filepath)
