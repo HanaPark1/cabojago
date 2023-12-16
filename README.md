@@ -85,36 +85,42 @@
 
 - 예시)
    - 망원 [💻 "열중 열중! 카공하기 좋은 카페"]
-  
+   <br />
    <img width="833" alt="카페 망원" src="https://github.com/cabojago/cabojago/assets/69382168/807c57ce-8a0a-499c-99c8-cf299f3eeb06">
 
    - 망원 [🙏 "내가 바로 트렌디세터, 인스타그래머블 카페"]
- 
+   <br />
    <img width="817" alt="인스타 망원" src="https://github.com/cabojago/cabojago/assets/69382168/0e5594eb-6e84-4059-8e7c-c500eb55861e">
- 
+   <br />
    - 망원 [👀 “힐링하고 싶어? 뷰 맛집 카페“]
-
+   <br />
    <img width="810" alt="뷰 망원" src="https://github.com/cabojago/cabojago/assets/69382168/0870648a-9cca-4ede-8e85-de6fb134ba99">
-
+   <br />
    - 망원 [🍰 “달다구리 디저트 카페“]
    <img width="825" alt="디저트 망원" src="https://github.com/cabojago/cabojago/assets/69382168/41c7700d-7ecf-4af7-9061-f554fd9e0d2c">
-
+   <br />
    - 망원 [🦄 “색다른 카페를 가고싶어.. 이색 카페“]
    <img width="806" alt="이색 망원" src="https://github.com/cabojago/cabojago/assets/69382168/658085d9-5b11-4a24-86a5-3ccf81ae9d54">
-
+   <br />
    - 망원 [☕️ “코히러버들을 위한 커피 맛집 카페“]
    <img width="740" alt="커피 먕원" src="https://github.com/cabojago/cabojago/assets/69382168/531bbc8a-0b81-4126-a7d5-2366e04a367c">
-
+   <br />
   - 망원 [♻️ “환경은 소중해! 친환경 카페“]
   
    <img width="756" alt="친환경 망원" src="https://github.com/cabojago/cabojago/assets/69382168/fd7e55c3-3575-4f25-8d16-53f430c6992d">
-
+  <br /> 
   - 망원 [😸 “애니멀 봐! 동물카페“] -> 카페에 있는 귀여운 동물을 볼 수 있거나, 애견동반이 가능한 카페
    <img width="780" alt="동물 망원" src="https://github.com/cabojago/cabojago/assets/69382168/35da247a-88d3-4100-9114-2110f331c3b2">
-
+ <br />
   - 망원 [🩷 “꽁냥꽁냥 데이트하기 좋은 카페“]
    <img width="760" alt="망원 데이트" src="https://github.com/cabojago/cabojago/assets/69382168/b662159e-d46d-459e-9799-0c69eb81430f">
+ 
+#### 결론
 
+리뷰많은 순으로 정렬을 했으나, 프렌차이즈 카페가 상위권에 노출되는 것이 부적합하다고 판단하여 최종 결과는 정렬을 하지않았습니다.
+<br />
+[리뷰많은 순 정렬 결과]
+<img width="856" alt="ㄱㄱㄱ" src="https://github.com/cabojago/cabojago/assets/69382168/5f82c310-6f8a-4d23-9031-d7e7777c3e67">
 
 
 
