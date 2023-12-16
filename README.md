@@ -74,8 +74,10 @@
 - pig를 이용한 테이블 조인
 - 전체 카페 최종 분류
 
-- 한남
-<img width="778" alt="KakaoTalk_Photo_2023-12-16-18-18-35" src="https://github.com/cabojago/cabojago/assets/69382168/d35b61dd-8cf5-45b2-b471-98c0c1a27493">
+- 예시)
+   - 한남 [💻 열중 열중! 카공하기 좋은 카페]
+   <img width="825" alt="result" src="https://github.com/cabojago/cabojago/assets/69382168/11aec487-f8f1-493d-8620-cb03480613e9">
+   - 한남 [🙏 내가 바로 트렌디세터, 인스타그래머블 카페]
+  
 
--연희
 
