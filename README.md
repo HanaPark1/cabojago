@@ -71,10 +71,12 @@
 
 - 카페 분류 키워드 선정 (전체 동네 카페 리스트 word 등장횟수를 기준으로)
 <img width="149" alt="스크린샷 2023-12-16 오후 7 43 49" src="https://github.com/cabojago/cabojago/assets/69382168/d67a8c8f-2f26-484f-adf7-ce00faa8938e">
-
+<br/>
+<br/>
 - 카페 카테고리별 가중치를 다르게 부여 (카테고리별 카페 횟수 히스토그램 결과를 기반으로)
 <img width="546" alt="스크린샷 2023-12-16 오후 7 45 21" src="https://github.com/cabojago/cabojago/assets/69382168/e13f0186-f6de-4ac1-9eb0-ff9e23564c7f">
-
+<br/>
+<br/>
 - 리뷰 단어 카운트 결과를 키워드로 받아 카페 카테고리별로 매핑
 <img width="778" alt="KakaoTalk_Photo_2023-12-16-18-18-35" src="https://github.com/cabojago/cabojago/assets/69382168/731467ba-5b7e-47a7-943c-f157d71236d5">
 
@@ -85,36 +87,39 @@
 
 - 예시)
    - 망원 [💻 "열중 열중! 카공하기 좋은 카페"]
-   <br />
+   <br/>
    <img width="833" alt="카페 망원" src="https://github.com/cabojago/cabojago/assets/69382168/807c57ce-8a0a-499c-99c8-cf299f3eeb06">
-
+   <br/>
    - 망원 [🙏 "내가 바로 트렌디세터, 인스타그래머블 카페"]
    <br />
    <img width="817" alt="인스타 망원" src="https://github.com/cabojago/cabojago/assets/69382168/0e5594eb-6e84-4059-8e7c-c500eb55861e">
-   <br />
+   <br/>
    - 망원 [👀 “힐링하고 싶어? 뷰 맛집 카페“]
-   <br />
+   <br/>
    <img width="810" alt="뷰 망원" src="https://github.com/cabojago/cabojago/assets/69382168/0870648a-9cca-4ede-8e85-de6fb134ba99">
-   <br />
+   <br/>
    - 망원 [🍰 “달다구리 디저트 카페“]
    <img width="825" alt="디저트 망원" src="https://github.com/cabojago/cabojago/assets/69382168/41c7700d-7ecf-4af7-9061-f554fd9e0d2c">
-   <br />
+   <br/>
    - 망원 [🦄 “색다른 카페를 가고싶어.. 이색 카페“]
+   <br/>
    <img width="806" alt="이색 망원" src="https://github.com/cabojago/cabojago/assets/69382168/658085d9-5b11-4a24-86a5-3ccf81ae9d54">
-   <br />
+   <br/>
    - 망원 [☕️ “코히러버들을 위한 커피 맛집 카페“]
+   <br/>
    <img width="740" alt="커피 먕원" src="https://github.com/cabojago/cabojago/assets/69382168/531bbc8a-0b81-4126-a7d5-2366e04a367c">
-   <br />
+   <br/>
    - 망원 [♻️ “환경은 소중해! 친환경 카페“]
-  
+   <br/>
    <img width="756" alt="친환경 망원" src="https://github.com/cabojago/cabojago/assets/69382168/fd7e55c3-3575-4f25-8d16-53f430c6992d">
-   <br /> 
+   <br/>
    - 망원 [😸 “애니멀 봐! 동물카페“] -> 카페에 있는 귀여운 동물을 볼 수 있거나, 애견동반이 가능한 카페
    <img width="780" alt="동물 망원" src="https://github.com/cabojago/cabojago/assets/69382168/35da247a-88d3-4100-9114-2110f331c3b2">
-   <br />
+   <br/>
    - 망원 [🩷 “꽁냥꽁냥 데이트하기 좋은 카페“]
+   <br/>
    <img width="760" alt="망원 데이트" src="https://github.com/cabojago/cabojago/assets/69382168/b662159e-d46d-459e-9799-0c69eb81430f">
- 
+  <br/>
 ### 결론
 
 리뷰많은 순으로 정렬을 했으나, 프렌차이즈 카페가 상위권에 노출되는 것이 부적합하다고 판단하여 최종 결과는 정렬을 하지않았습니다.
