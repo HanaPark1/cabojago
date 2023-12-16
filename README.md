@@ -73,3 +73,9 @@
 #### 12/14
 - pig를 이용한 테이블 조인
 - 전체 카페 최종 분류
+
+- 한남
+<img width="778" alt="KakaoTalk_Photo_2023-12-16-18-18-35" src="https://github.com/cabojago/cabojago/assets/69382168/d35b61dd-8cf5-45b2-b471-98c0c1a27493">
+
+-연희
+
