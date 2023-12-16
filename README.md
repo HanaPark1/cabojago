@@ -70,14 +70,17 @@
 #### 12/10     
 
 - 카페 분류 키워드 선정 (전체 동네 카페 리스트 word 등장횟수를 기준으로)
+<br/>
 <img width="149" alt="스크린샷 2023-12-16 오후 7 43 49" src="https://github.com/cabojago/cabojago/assets/69382168/d67a8c8f-2f26-484f-adf7-ce00faa8938e">
 <br/>
 <br/>
 - 카페 카테고리별 가중치를 다르게 부여 (카테고리별 카페 횟수 히스토그램 결과를 기반으로)
+<br/>
 <img width="546" alt="스크린샷 2023-12-16 오후 7 45 21" src="https://github.com/cabojago/cabojago/assets/69382168/e13f0186-f6de-4ac1-9eb0-ff9e23564c7f">
 <br/>
 <br/>
 - 리뷰 단어 카운트 결과를 키워드로 받아 카페 카테고리별로 매핑
+<br/>
 <img width="778" alt="KakaoTalk_Photo_2023-12-16-18-18-35" src="https://github.com/cabojago/cabojago/assets/69382168/731467ba-5b7e-47a7-943c-f157d71236d5">
 
 
