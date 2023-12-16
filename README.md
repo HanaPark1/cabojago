@@ -1,4 +1,4 @@
-![image](https://github.com/cabojago/cabojago/assets/69382168/6479ee76-352b-4237-aea8-4466d73793a0)# BigData Programming Term Project (2023-2)
+# BigData Programming Term Project (2023-2)
 
 ### Project Overview
 : MZ를 위한 카테고리별 카페 분류 프로그램
